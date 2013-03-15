@@ -1,0 +1,9 @@
+{
+  "name": "toozip",
+  "version": "0.0.1",
+  "description": "zip folder",
+  "author": "TooBug<i@toobug.net>",
+  "dependencies": { },
+  "devDependencies": { },
+  "engine": "node >= 0.4.9"
+}
