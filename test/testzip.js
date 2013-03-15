@@ -3,7 +3,7 @@ var zip = require("../source/index.js");
 
 var archive = new zip();
 
-archive.addFiles([ 
+/*archive.addFiles([ 
     { name: "demo.js", path: "./demo.js" },
     { name: "images/image.png", path: "./image.png" }
 ], function (err) {
@@ -17,4 +17,6 @@ archive.addFiles([
 
     });
 
-});
+});*/
+
+archive.zipFolder('./test','test_toozip.zip');
