@@ -222,8 +222,8 @@ var Zip = function () {
 
 			fileList.forEach(function(fileName){
 				fileParam.push({
-					name:fileName,
-					path:fileName
+					name:dir+'/'+fileName,
+					path:path.join(process.cwd(),dir,fileName)
 				});
 			});
 
