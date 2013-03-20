@@ -114,6 +114,7 @@ var Zip = function () {
 			filenames.forEach(function (f) {
 				fs.readFile(f.path, function (err, data) {
 					if (err) {
+						console.log(err);
 						return onFileRead(err);
 					}
 					else {
@@ -221,6 +222,7 @@ var Zip = function () {
 			}),fileParam = [];
 
 			fileList.forEach(function(fileName){
+				if(fs.statSync(dir+'/'+fileName).isDirectory()) return;
 				fileParam.push({
 					name:dir+'/'+fileName,
 					path:path.join(process.cwd(),dir,fileName)
