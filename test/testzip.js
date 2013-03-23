@@ -19,4 +19,6 @@ var archive = new zip();
 
 });*/
 
-archive.zipFolder('./test','test_toozip.zip');
+archive.zipFolder('./source','test_source.zip',function(){
+	console.log('done');
+});

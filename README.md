@@ -7,7 +7,11 @@ compress a folder to a zip file.
 
 	var archive = new zip();
 
-	archive.zipFolder('test','test.zip');
+	archive.zipFolder('test','test.zip',function(){
+
+		console.log('zip file generated!');
+
+	});
 	
 
 ## Thanks

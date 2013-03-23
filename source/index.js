@@ -212,7 +212,7 @@ var Zip = function () {
 		}
 
 		//遍历目录，生成压缩文件
-		function zipFolder(dir,dest){
+		function zipFolder(dir,dest,callback){
 
 			var self = this;
 			
@@ -235,7 +235,7 @@ var Zip = function () {
 			    var buff = self.toBuffer(function(buff){
 			    	
 				    fs.writeFile(dest, buff, function () {
-				        console.log("Finished");
+				        callback && callback();
 				    });
 
 			    });
